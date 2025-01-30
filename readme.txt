@@ -1,3 +1,6 @@
+
+Pedido:
+
 Desarrollar el servidor basado en Node.JS y express, que escuche en el puerto 8080 y disponga de dos grupos de rutas: /products y /carts. Dichos endpoints estarán implementados con el router de express, con las siguientes especificaciones:
 
 Para el manejo de productos, el cual tendrá su router en /api/products/ , configurar las siguientes rutas:
@@ -30,3 +33,18 @@ quantity: debe contener el número de ejemplares de dicho producto. El producto,
 Además, si un producto ya existente intenta agregarse al producto, incrementar el campo quantity de dicho producto. 
 La persistencia de la información se implementará utilizando el file system, donde los archivos “productos.json” y “carrito.json”, respaldan la información.
 No es necesario realizar ninguna implementación visual,
+
+Uso ---------------------------------------------------------------
+
+Crear un carrito
+Método: POST
+URL: http://localhost:8080/api/carts/
+
+Agregar productos al carrito
+/api/carts/:cid/product/:pid, donde:
+:cid es el ID del carrito.
+:pid es el ID del producto que deseas agregar.
+http://localhost:8080/api/carts/1/product/1
+
+verificar el carrito
+http://localhost:8080/api/carts/1
