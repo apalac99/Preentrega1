@@ -28,7 +28,7 @@ router.get('/:pid', (req, res) => {
 router.post('/', (req, res) => {
   const products = readProducts();
   const newProduct = {
-    id: (products.length + 1).toString(), // Generar un ID único
+    id: (products.length + 1).toString(), // Genera un ID único
     ...req.body,
     status: true,
     thumbnails: req.body.thumbnails || [],

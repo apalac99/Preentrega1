@@ -6,7 +6,7 @@ const { readCarts, writeCarts, readProducts } = require('../utils/fileManager');
 router.post('/', (req, res) => {
   const carts = readCarts();
   const newCart = {
-    id: (carts.length + 1).toString(), // Generar un ID único
+    id: (carts.length + 1).toString(), // Genera un ID único
     products: [],
   };
   carts.push(newCart);
