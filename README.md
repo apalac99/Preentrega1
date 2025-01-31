@@ -48,9 +48,9 @@ Método: POST
 URL: http://localhost:8080/api/carts/
 
 Agregar productos al carrito
-/api/carts/:cid/product/:pid, donde:
+/api/carts/:cid/product/:pid
 :cid es el ID del carrito.
-:pid es el ID del producto que deseas agregar.
+:pid es el ID del producto.
 http://localhost:8080/api/carts/1/product/1
 
 verificar el carrito
